@@ -1,0 +1,55 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Keyword Extractor</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="mobile.css">
+  </head>
+
+<body>
+	<div class="content" align="center">
+		<div class="header-wrap">
+			<h1>Life Calendar in Weeks</h1>
+		</div>
+
+		<form>
+		  <label>Your birthday is:</label>
+		  <input type="date" id="birthdate" name="birthdate">
+		  <input type="submit" id="get-calendar-button" value="Get calendar">
+		</form>
+		
+		<div id="result" align="center">
+		</div>
+	</div>
+	
+    <footer>
+		<img id="signature" src="assets/signature-black.svg">
+	</footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	 <script>$(document).ready(function() {
+         $('form').on('submit', function(event) {
+           $.ajax({
+              data : {
+                 birthdate : $('#birthdate').val(),
+                     },
+                 type : 'POST',
+                 url : 'https://nhattestnet.pythonanywhere.com/calendar'
+                })
+            .done(function(data) {
+              $('#result').html(data.result);
+          });
+          event.preventDefault();
+          });
+        });
+    </script>
+
+</body>
+</html>
+

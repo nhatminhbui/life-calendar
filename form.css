@@ -1,0 +1,38 @@
+#birthdate {
+  border: 1px solid #555;
+  font-family: DMMono, sans-serif;
+  font-size: 12pt;
+  color: black;
+  line-height: 1;
+  border-radius: 10px;
+  margin: 0px 0px;
+  padding: 5px;
+  background: none;
+}
+
+
+#get-calendar-button {
+  margin-top: 25px;
+  padding: 8px 20px;
+  border: 0px solid #ccc;
+  background: #0046ff;
+  border-radius: 10px;
+  
+  color: white;
+  font-size: 9pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+#get-calendar-button:hover {
+  box-shadow: 0 16px 24px 0 rgba(0,0,0,.1);
+}
+
+input[type=submit] {
+  font-family: DMSans, sans-serif;
+  font-size: 13pt;
+}
+input[type=submit]:hover{background-color:#7f0824;}
+input[type=submit]:focus{background-color:#cf0824;}

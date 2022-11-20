@@ -71,11 +71,9 @@ b {
 }
 
 
-#result {
-    width: 86%;
-    margin: auto;
+#calendar-img {
+    width: 100%;    
 }
-
 /* ----- footer ----- */
 
 footer {
